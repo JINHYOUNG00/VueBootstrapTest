@@ -3,9 +3,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store'; // Vuex 스토어 설정이 있는 경우
 
-import './assets/home/css/bootstrap.min.css';
-import './assets/home/css/style.css';
-import './assets/home/js/main';
+// import 'bootstrap'
+// import './assets/home/css/bootstrap.min.css';
+// import './assets/home/css/style.css';
+// import './assets/home/js/main.js';
 
 router.beforeEach((to, from, next) => {
     if (to.meta.template === 'admin') {
