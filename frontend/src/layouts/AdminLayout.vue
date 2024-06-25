@@ -1,5 +1,5 @@
 <template>
-    <Adminheader />
+    <AdminHeader />
     <AdminNav />
     <div></div>
     <AdminFooter />

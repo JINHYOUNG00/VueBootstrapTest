@@ -1,15 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AdminHome from '../views/AdminHome.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
+
+
+import MainPage from '@/views/MainView.vue';
+import MyPage from '@/views/MyPage.vue'
 
 const routes = [
+
     {
         path: '/',
-        name: 'Home',
-        component: HomeView,
+        redirect: '/user/home'
+    },
+    {
+        path: '/user',
+        name: 'user',
+        component: DefaultLayout,
         meta: {
             template: 'home', // Home 템플릿
         },
+        children: [
+            {
+                path: 'home',
+                component: MainPage
+            },
+            {
+                path: 'mypage',
+                component: MyPage
+            },
+        ]
     },
     {
         path: '/admin',
